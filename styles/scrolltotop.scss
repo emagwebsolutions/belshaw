@@ -1,0 +1,75 @@
+
+
+
+
+@media(max-width: 35em){
+    .whatsappbtn,
+    .scrolltotop{
+        border-radius:  50%;
+        padding: 1em;
+        width: 4.5rem;
+        height: 4.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        font-size: 1.4rem;
+        top: 80%;
+        z-index: 3;
+        cursor: pointer
+    }
+    
+    
+    .scrolltotop{
+        right: 5%;
+        background-color: white();
+        border: solid .2rem danger();
+    }
+    
+    .whatsappbtn{
+        left: 5%;
+        background-color: success();
+        
+        .fa-whatsapp{
+            border: none!important;
+            color: white!important;
+            font-size: 2rem;
+        }
+    }
+}
+
+@media(min-width: 35em){
+    .whatsappbtn,
+    .scrolltotop{
+        border-radius:  50%;
+        padding: 1em;
+        width: 4.5rem;
+        height: 4.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        font-size: 1.4rem;
+        top: 80%;
+        z-index: 99;
+        cursor: pointer
+    }
+    
+    
+    .scrolltotop{
+        right: 5%;
+        background-color: white();
+        border: solid .2rem danger();
+    }
+    
+    .whatsappbtn{
+        left: 5%;
+        background-color: success();
+        
+        .fa-whatsapp{
+            border: none!important;
+            color: white!important;
+            font-size: 2rem;
+        }
+    }   
+}

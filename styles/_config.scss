@@ -1,0 +1,234 @@
+
+
+    //COLORS
+    @function white($opacity: 1){
+        @return rgba(255,255,255, $opacity);
+    }
+    @function grey(){
+        @return #ededed;
+    }
+    @function default($opacity: 1){
+        @return rgba(241,241,241, $opacity);
+    }
+    @function black($opacity: 1){
+        @return rgba(90,90,90, $opacity);
+    }
+    @function muted($opacity: 1){
+        @return rgba(102,102,102, $opacity);
+    }
+    @function danger($opacity: 1){
+        @return rgba(223, 64, 32, $opacity);
+    }
+    @function warning($opacity: 1){
+        @return rgba(255,202,128, $opacity);
+    }
+    @function primary($opacity: 1){
+        @return rgba(17,117,192, $opacity);
+    }
+    @function success($opacity: 1){
+        @return rgba(51,153,51, $opacity);
+    }
+
+    .text-white{
+        color: white();
+    }
+    .text-black{
+        color: black();
+    }
+    .text-muted{
+        color: muted();
+    }
+    .text-danger{
+        color: danger();
+    }
+    .text-warning{
+        color: warning();
+    }
+    .text-primary{
+        color: primary();
+    }
+    .text-success{
+        color: success();
+    }
+    .bg-white{
+        background-color: white();
+    }
+    .bg-black{
+        background-color: black();
+    }
+    .bg-muted{
+        background-color: muted();
+    }
+    .bg-danger{
+        background-color: danger();
+    }
+    .bg-warning{
+        background-color: warning();
+    }
+    .bg-primary{
+        background-color: primary();
+    }
+    .bg-success{
+        background-color: success();
+    }
+    .bg-default{
+        background-color: default();
+    }
+        
+    //FLEX PROPERTIES
+
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .space-between{
+        justify-content: space-between;
+    }
+    .space-around{
+        justify-content: space-around;
+    }
+    .justify-content-center{
+        justify-content: center;
+    }
+
+
+    //EACH ITERATOR
+    $arr: (1,2,3,4,5,6,7,8,9,0);
+    @each $v in $arr {
+        .gap-#{$v}{
+            gap: #{$v}rem;
+        }
+        .col-#{$v}{
+            flex: #{$v}0rem 1 1!important;
+        }
+        .p-#{$v}{
+            padding: #{$v}em;
+        }
+        .pl-#{$v}{
+            padding-left: #{$v}em;
+        }
+        .pr-#{$v}{
+        padding-right: #{$v}em;
+        }
+        .pt-#{$v}{
+            padding-top: #{$v}em;
+        }
+        .pb-#{$v}{
+        padding-bottom: #{$v}em;
+        }
+            
+        .m-#{$v}{
+            margin: #{$v}em;
+        }
+        .ml-#{$v}{
+            margin-left: #{$v}em;
+        }
+        .mr-#{$v}{
+        margin-right: #{$v}em;
+        }
+        .mb-#{$v}{
+        margin-bottom: #{$v}em;
+        }
+        .mt-#{$v}{
+        margin-bottom: #{$v}em;
+        }
+        .b-radius-#{$v}{
+            border-radius: #{$v}rem;
+        }
+
+    }
+
+
+
+    //Margins 
+    .m-auto{
+        margin-inline: auto;
+    }
+    .ml-auto{
+        margin-left: auto;
+    }
+    .mr-auto{
+        margin-right: auto;
+    }
+    .m-none{
+    margin: 0;
+    }
+    .p-none{
+    padding: 0;
+    }
+
+
+    //Borders
+    .border{
+        border: solid 1px muted();
+    }
+    .border-bottom{
+        border: solid 1px muted();
+    }
+    .border-top{
+        border: solid 1px muted();
+    }
+    .border-left{
+        border: solid 1px muted();
+    }
+    .border-right{
+        border: solid 1px muted();
+    }
+
+
+    //Radius
+    .b-radius-round{
+        border-radius: 50%;
+    }
+
+    
+    //FONT SIZES
+    .f-size-1{
+        font-size: 1rem;
+    }
+    .f-size-2{
+        font-size: 1.2rem;
+    }
+    .f-size-3{
+        font-size: 1.4rem;
+    }
+    .f-size-4{
+        font-size: 1.6rem;
+    }
+    .f-size-5{
+        font-size: 1.8rem;
+    }
+
+
+    //Text Align
+    .text-center{
+    text-align:  center;
+    }
+    .text-left{
+    text-align:  left;
+    }
+    .text-right{
+    text-align:  right;
+    }
+    .text-justify{
+    text-align:  justify;
+    }
+
+
+    //Display
+    .d-block{
+    display: block;
+    }
+    .flex{
+        display: flex;
+    }
+
+    .divider{
+        width: 20rem;
+        border-bottom: solid .1rem muted();
+        margin-inline: auto;
+    }
+
+   
+
+

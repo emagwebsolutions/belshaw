@@ -1,0 +1,104 @@
+ 
+ :root{
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+  }
+  body{
+    min-height: 100vh;
+    font-size: 1.8rem!important;
+    line-height: 1.8;
+    font-family: 'Arimo';
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+
+  *,
+  ::before,
+  ::after{
+    box-sizing: border-box;
+  }
+  
+  ul{
+    list-style: none;
+  }
+
+  body,
+  ul,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5{
+    margin: 0;
+    padding: 0;
+  }
+  
+  img{
+    display: block;
+    max-width: 100%;
+  }
+  
+  input,
+  button,
+  textarea,
+  select {
+      font: inherit;
+      outline: none;
+      border: solid .1rem #ccc;
+  }
+  
+  a{
+    text-decoration: none;
+    @extend .text-muted;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6{
+    font-family: 'Raleway', sans-serif;
+  }
+
+  p{
+    color: muted();
+  }
+
+
+  .para-text{
+      color: muted();
+      h2{
+        font-size: 2.8rem;
+        margin-bottom: 1em;
+      }
+      strong{
+        font-weight: bold;
+        font-size: 2rem;
+      }
+      ol{
+        line-height: 2.5rem;
+        li{
+          margin-bottom: 1em;
+        }
+      }
+  }
+
+
+@media(min-width: 35em){
+
+  .container{
+    display: flex;
+    gap: 3rem;
+    max-width: 90rem;
+    margin-inline: auto;
+    margin-block: 0;
+    flex-wrap: wrap;
+    div{
+      flex: 1rem 1 1;
+    }
+  }
+
+}
+

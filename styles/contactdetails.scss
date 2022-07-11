@@ -1,0 +1,37 @@
+.contactdetails{
+    display: flex;
+    gap: 2rem;
+    h4{
+        color: black();
+        margin-top: 0;
+        font-size: 1.6rem;
+    }
+    div{
+        font-size: 1.2rem;
+        color: muted();
+    }
+    padding: 1em;
+    .fa{
+        width: 3rem;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        border-radius: 50%;
+        border: solid .1rem muted();
+        margin-top: .6rem;
+    }
+}
+
+@media(min-width: 35em){
+    .contact-flex{
+        display: flex;
+    }
+}
+
+@media(max-width: 35em){
+    .mob-mt{
+        margin-top: 4em;
+    }
+}

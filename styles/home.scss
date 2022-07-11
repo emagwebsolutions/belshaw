@@ -1,0 +1,23 @@
+.sectionone{
+    padding: 3em;
+    background-color: #f5f5f5;
+}
+
+.sectiontwo{
+    padding: 3em;
+    background-color: white;
+}
+
+.sectionthree{
+    padding: 3em;
+    background-color: #384858;
+}
+
+
+@media(max-width: 35em){
+    .mob-container{
+        div{
+            margin-bottom: 3em;
+        }
+    }
+}
