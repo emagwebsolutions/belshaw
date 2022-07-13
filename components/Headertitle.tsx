@@ -10,10 +10,8 @@ const Headertitle = () => {
              on your doorstep
             </h1>
 
-
-
             <p>
-            Invest your time and efforts on constructing your building. Leave the roofing to us.
+            With a team of highly experienced cleaning professionals, we specialize in detailed and comprehensive cleaning. 
             </p>
 
 

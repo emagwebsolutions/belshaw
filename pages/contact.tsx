@@ -1,7 +1,6 @@
 import Sectiontitle from '../components/Sectiontitle';
 import Bannertitle from '../components/Bannertitle';
 import Contactdetails from '../components/Contactdetails';
-import Requestquote from '../components/Requestquote';
 import Banner from '../components/Banner';
 
 const Contact = () => {
@@ -75,7 +74,7 @@ const Contact = () => {
 
           <div className="col-3">
             <div className="mob-mt"></div>
-          <Requestquote  />
+
           </div>
           </div>
       </section>

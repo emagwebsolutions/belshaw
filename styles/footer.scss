@@ -1,151 +1,18 @@
-
-@media(min-width: 35em){
-
-    .footer-wrapper{
-        line-height: 1.7rem!important;
-        padding-block: 1.8em;
-        padding-inline: 3em;
-        background-color: #282c4f;
-        color: white;
-        position: relative;
-        .about-box{
-            a{
-                background-color: danger();
-                padding: 1em;
-            }
-        }
-
-        .fa{
-            width: 3rem; 
-            height: 3rem;
-            border: solid .1rem warning();
-            border-radius: 50%;
-            padding: .3em;
-            color: warning();
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-        }
-
-        h4{
-            font-weight: bold;
-            font-size: 1.4rem;
-            margin-bottom: 1em;
-        }
-        a{
-            color: #efefef;
-            font-size: 1rem!important;
-        }
-        p{
-            color: #efefef;
-            font-size: 1.2rem;
-        }
-
-        ul{
-            li{
-                position: relative;
-                a{
-                    padding-left: 2em;
-                }
-                a::before{
-                    content: '^';
-                    position: absolute;
-                    transform: rotate(90deg);
-                    font-size: 1rem;
-                    top: 9%;
-                    left: 0;
-                  
-                }
-            }
-        }
-    }
-
-    footer{
+footer{
+    width: 100vw; 
+    height: 30rem;
+    background-image: url('/footerimg.jpg');
+    background-size: cover; 
+    background-position: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    div{
+        text-align: center;
         font-size: 1.2rem;
-        padding-block: 1em;
-        padding-inline: 3em;
-    }
-
-}
-
-
-
-
-
-
-
-
-@media(max-width: 35em){
-    .footer-wrapper{
-        line-height: 1.7rem!important;
-        padding-block: 1.8em;
-        padding-inline: 3em;
-        background-color: #282c4f;
-        color: white;
-        position: relative;
-        .about-box{
-            a{
-                background-color: danger();
-                padding: 1em;
-                display: block;
-                margin-top: 2em;
-                width: 11rem;
-            }
-        }
-        
-
-        .fa{
-            width: 3rem; 
-            height: 3rem;
-            border: solid .1rem warning();
-            border-radius: 50%;
-            padding: .3em;
-            color: warning();
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-        }
-
-        h4{
-            font-weight: bold;
-            font-size: 1.4rem;
-            margin-bottom: 1em;
-        }
-        a{
-            color: #efefef;
-            font-size: 1rem!important;
-        }
-        p{
-            color: #efefef;
-            font-size: 1.2rem;
-        }
-
-        ul{
-            li{
-                position: relative;
-                a{
-                    padding-left: 2em;
-                }
-                a::before{
-                    content: '^';
-                    position: absolute;
-                    transform: rotate(90deg);
-                    font-size: 1rem;
-                    top: 9%;
-                    left: 0;
-                  
-                }
-            }
+        h1{
+            font-size: 2rem;
+            color: muted();
         }
     }
-
-    footer{
-        font-size: 1.2rem;
-        padding-block: 1em;
-        padding-inline: 3em;
-    }
-
-  
 }

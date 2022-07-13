@@ -6,7 +6,6 @@ const obj = {
 Object.defineProperty(obj,'talk', {
     get: function(){
         return age
-    }
-})
+    }})
 
 console.log(obj.talk)
