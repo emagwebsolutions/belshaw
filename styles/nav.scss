@@ -48,7 +48,7 @@
             display: flex;
             gap: 2rem;
             align-items: center;
-
+            & > li:nth-of-type(3)::before,
             & > li:nth-of-type(4)::before
             {
                 content: '^';
@@ -129,6 +129,7 @@
             align-items: center;
             top: 6rem;
             position: absolute;
+            & > li:nth-of-type(3)::before,
             & > li:nth-of-type(4)::before
             {
                 content: '^';
@@ -191,6 +192,15 @@
     
         }
     }  
+    .getquote{
+        a{
+            display: block;
+            background-color: danger();
+            color: white!important; 
+            border-radius: 2rem;
+            text-align: center;
+        }
+    }
 }
     
 

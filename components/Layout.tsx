@@ -10,7 +10,7 @@ type Children = {
 const Layout = ( { children }: Children ) => {
   return (
           <>
-          <Meta title="EMINENCE NEEDLE ART" />
+          <Meta title="Belshaw Cleaning Service" />
           <div className="main-wrapper">
             <Nav />
             <main>

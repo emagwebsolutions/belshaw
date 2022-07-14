@@ -22,7 +22,7 @@ const Footer = ()=>{
                 </div>
                 <ScrollToTop smooth className="scrolltotop" />
 
-                    <a className="whatsappbtn" href="http://wa.me/233598775968?text=Hello%2C%20I%20want%20to%20make%20enquiries%20about%20your%20roofing%20sheets">
+                    <a className="whatsappbtn" href="http://wa.me/233596056615?text=Hello%20I%20want%20to%20make%20enquiries%20about%20your%20cleaning%20service">
                     <i className="fa fa-whatsapp"></i>
                     </a>
             </footer>

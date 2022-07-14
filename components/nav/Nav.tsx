@@ -71,9 +71,40 @@ const Nav = ()=>{
                         </Link>
                     </li>
                     <li>
-                        <Link href="/about">
+                        <Link href="/#">
                             <a onClick={closenav}>About Us</a>
                         </Link>
+                        <ul>
+
+                        <li>
+                            <Link href="/whoweare">
+                                <a onClick={closenav}>
+                                Who we are
+                                </a>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/ourvision">
+                                <a onClick={closenav}>
+                                Our Vision
+                                </a>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/ourmission">
+                                <a onClick={closenav}>
+                                Our Mission
+                                </a>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/ourcorevalues">
+                                <a onClick={closenav}>
+                                Our Core Values
+                                </a>
+                            </Link>
+                        </li>
+                        </ul>
                     </li>
                     <li>
                         <Link href="/#">
@@ -110,8 +141,13 @@ const Nav = ()=>{
                         </Link>
                     </li>
                     <li>
-                        <Link href="/contact">
+                        <Link href="/#">
                             <a onClick={closenav}>Contact</a>
+                        </Link>
+                    </li>
+                    <li className="getquote">
+                        <Link href="/#">
+                            <a onClick={closenav}>Get a free quote</a>
                         </Link>
                     </li>
 

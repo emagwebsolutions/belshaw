@@ -1,0 +1,36 @@
+.about{
+
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    padding: 1.5em;
+    box-shadow: .3rem .3rem .3rem muted(.2);
+    margin-bottom: 6em;
+    img{
+        width: 100%;
+        border-bottom-left-radius: 8rem;
+    }
+    & > div:nth-of-type(1){
+        padding-right: 1.5em;
+    }
+    & > div{
+        flex: 5rem 1 1;
+    }
+    p{
+        font-size: 1.2rem;
+    }
+    ul{
+        list-style-type:circle;
+        font-size: 1.2rem;
+        line-height: 1.7rem;
+        margin-left: 1.2em;
+    }
+    h4{
+        margin-top: -3rem;
+        color: muted();
+    }
+    h1{
+        color: muted();
+    }
+
+}

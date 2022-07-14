@@ -1,0 +1,47 @@
+
+
+
+@media(min-width: 35em){
+    .bannertitle{
+        h1{
+            font-size: 5.5rem;
+            font-weight: 900;
+            color: white;
+        }
+        h4{
+            font-size: 1.4rem;
+            color: white;
+        }
+        line-height: 5rem;
+        position: absolute;
+        top: 20rem;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        z-index: 3;
+    
+    }
+}
+
+@media(max-width: 35em){
+    .bannertitle{
+        line-height: 3.6rem;
+        width: 100%;
+        padding: 3em;
+        h1{
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: white;
+        }
+        h4{
+            font-size: 1.4rem;
+            color: white;
+        }
+   
+        position: absolute;
+        top: 35rem;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        z-index: 3;
+    
+    }  
+}

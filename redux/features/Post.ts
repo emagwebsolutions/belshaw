@@ -10,7 +10,11 @@ const Post = createSlice({
     initialState,
     reducers: {
         postactiontype: (state,action) => {
+            if(!state.data){
+                return state
+            }
             state.data = action.payload
+
         }
     }
 })

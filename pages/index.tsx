@@ -25,6 +25,7 @@ const Home: NextPage = ({ data }: any) => {
   }
   const result = useSelector((state: State) => state.post.data.result)
 
+
   const builder = imageUrlBuilder({
     projectId: 'x6mgs9be',
     dataset: 'production'
@@ -101,21 +102,38 @@ const Home: NextPage = ({ data }: any) => {
     </div>
   ))
 
-//About Us content
-    //Get Commercial Cleaning
-    const aboutus = Object.values(getData).filter((v: any) => {
+
+    //Get Laundry Service
+    const laundryservice = Object.values(getData).filter((v: any) => {
       return v.slug === 'laundry-services'
     }).map((vl: any,k: any) =>(
-      <div key={k}>
-      <h1>{vl.title}</h1>
-      <div>
-        <PortableText value={vl.body} />
-      </div>
+      <div key={k} className="homepage-laundry">
+        <div>
+          <h1>{vl.title}</h1>
+          <div>
+            <PortableText value={vl.body} />
+          </div>
+        </div>
+        <div>
+          <img src={vl.mainImage} alt="" />
+        </div>
       </div>
   ))
 
-  const ourvision = aboutus[0]
+  //Get Our Customes
 
+  const ourcustomers = Object.values(getData).filter((v: any) => {
+    return v.cat_title === 'Customers'
+  }).map((vl: any,k: any) =>(
+    <div key={k}>
+      <div className="custbx">
+      <div>
+        <img src={vl.mainImage} alt="" />
+      </div>
+      <h5>{vl.title}</h5>
+    </div>
+    </div>
+))
 
   return (
     <>
@@ -134,7 +152,7 @@ const Home: NextPage = ({ data }: any) => {
           <div className="container">
             {residentialCleaning}
           </div>
-          <Link href="/service">
+          <Link href="/services">
             <a>View All</a>
           </Link>
       </section>
@@ -147,20 +165,25 @@ const Home: NextPage = ({ data }: any) => {
           <div className="container">
             {commercialCleaning}
           </div>
-          <Link href="/service">
+          <Link href="/services">
             <a>View All</a>
           </Link>
+          <br />
       </section>
 
 
       <section className="sectionone aboutus">
-            {ourvision}
+            {laundryservice}
       </section>
 
 
-
-
-
+      <section className="sectiontwo ourclients">
+        <h1>Our Clients</h1>
+        <div className="container">
+        {ourcustomers}
+        </div>
+        <br />
+      </section>
 
     </>
   )

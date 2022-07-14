@@ -1,0 +1,17 @@
+
+.iframeContainer{
+position: relative;
+overflow: hidden;
+width: 100vw;
+height: 110rem;
+    .iframeContent{
+        width: 100vw;
+        height: 110rem;
+        margin-bottom: 3rem;
+        position: absolute;
+        top: -10rem;
+    }
+
+}
+
+
