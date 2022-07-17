@@ -1,63 +1,19 @@
-import Sectiontitle from '../components/Sectiontitle';
 import Bannertitle from '../components/Bannertitle';
 import Banner from '../components/Banner';
-import { useSelector,useDispatch } from 'react-redux'
-import { useState,useEffect } from 'react'
-import { postactiontype } from '../redux/features/Post'
 import {PortableText} from '@portabletext/react'
-import imageUrlBuilder  from '@sanity/image-url';
 import Image from 'next/image'
-
-
-const Ourcorevalues = ({data}: any) => {
-
- 
-  const [ getData,setData ] = useState({})
-
-  // const dispatch = useDispatch()
-  // dispatch(postactiontype(data))
-
-  // type State = {
-  //   post: {
-  //     data: {
-  //       result: {}
-  //     }
-  //   }
-  // }
-  // const result = useSelector((state: State) => state.post.data.result)
+import { datacontext } from '../context/store'
+export { getServerSideProps } from '../context/store'
 
 
 
-
-
-  useEffect(()=>{
-
-    const builder = imageUrlBuilder({
-      projectId: 'x6mgs9be',
-      dataset: 'production'
-    })
-
-    const obj = Object.values(data).map( (v: any) => {
-      return {
-        ...v,
-        mainImage: builder.image(v.mainImage),
-        cat_title: v.cat_title+''
-      }
-    })
-
-    if(obj){
-      setData(obj)
-    }
-    else{
-      setData({})
-    }
-
-  },[data])
-
-
+const Ourcorevalues = () => {
+  const { post } = datacontext()
 
     //Get Laundry Service
-    const laundryservice = Object.values(getData).map((vl: any,k: any) =>(
+    const laundryservice = Object.values(post).filter((v: any) => {
+      return v.slug === 'our-core-values'
+    }).map((vl: any,k: any) =>(
       <div key={k} className="about">
         <div>
           <h1>{vl.title}</h1>
@@ -89,27 +45,6 @@ const Ourcorevalues = ({data}: any) => {
 }
 
 
-export const getServerSideProps = async ()=>{
-
-  const query = encodeURIComponent(`*[_type == "post" && slug.current  == 'our-core-values' ]{
-    "title": title,
-    "slug": slug.current,
-    body,
-    mainImage,
-    "cat_title" : categories[]->title
-  }`)
-
-  const url = `https://x6mgs9be.api.sanity.io/v1/data/query/production?query=${query}`
-
-  const result = await fetch(url).then( data => data.json())
-
-  return {
-    props: {
-      data: result.result
-    }
-  }
-
-}
 
 
 export default Ourcorevalues

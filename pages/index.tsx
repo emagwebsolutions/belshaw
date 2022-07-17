@@ -1,62 +1,18 @@
 import type { NextPage } from 'next'
-import Sectiontitle from '../components/Sectiontitle';
 import Headertitle from '../components/Headertitle'
-import { postactiontype } from '../redux/features/Post'
-import { useDispatch,useSelector } from 'react-redux';
-import imageUrlBuilder  from '@sanity/image-url';
-import { useState,useEffect } from 'react'
 import {PortableText} from '@portabletext/react'
 import Link from 'next/link' 
 import Image from 'next/image'
+import { datacontext } from '../context/store'
+export { getServerSideProps } from '../context/store'
 
 
-const Home: NextPage = ({ data }: any) => {
+const Home: NextPage = () => {
 
-  const [ getData,setData ] = useState({})
-
-  const dispatch = useDispatch()
-  dispatch(postactiontype(data))
-
-  console.log(data)
-
-  type State = {
-    post: {
-      data: {
-        result: {}
-      }
-    }
-  }
-
-  const result = useSelector((state: State) => state.post.data)
-
-  
-  useEffect(()=>{
-
-    const builder = imageUrlBuilder({
-      projectId: 'x6mgs9be',
-      dataset: 'production'
-    })
-
-    const obj = Object.values(result).map( (v: any) => {
-      return {
-        ...v,
-        mainImage: builder.image(v.mainImage),
-        cat_title: v.cat_title+''
-      }
-    })
-
-    if(obj){
-      setData(obj)
-    }
-    else{
-      setData({})
-    }
-
-  },[result])
-
+  const { post } = datacontext()
 
   //Get Residention Cleaning
-  const residentialInfo = Object.values(getData).filter((v: any) => {
+  const residentialInfo = Object.values(post).filter((v: any) => {
       return v.slug === 'residential-cleaning-excerpt'
     }).map((vl: any,k: any) =>(
       <div key={k}>
@@ -68,7 +24,7 @@ const Home: NextPage = ({ data }: any) => {
   ))
 
   //Get Residention Cleaning Services thumbnails
-  const residentialCleaning = Object.values(getData).filter((v: any) => {
+  const residentialCleaning = Object.values(post).filter((v: any) => {
     return v.cat_title === 'Residential Cleaning  '
   }).map((vl: any,k: any) =>(
     <div key={k}>
@@ -82,7 +38,7 @@ const Home: NextPage = ({ data }: any) => {
 
 
     //Get Commercial Cleaning
-    const commercialInfo = Object.values(getData).filter((v: any) => {
+    const commercialInfo = Object.values(post).filter((v: any) => {
       return v.slug === 'commercial-cleaning-excerpt'
     }).map((vl: any,k: any) =>(
       <div key={k}>
@@ -94,7 +50,7 @@ const Home: NextPage = ({ data }: any) => {
   ))
 
   //Get Commercial Cleaning Services thumbnails
-  const commercialCleaning = Object.values(getData).filter((v: any) => {
+  const commercialCleaning = Object.values(post).filter((v: any) => {
     return v.cat_title === 'Commercial Cleaning '
   }).map((vl: any,k: any) =>(
     <div key={k}>
@@ -107,7 +63,7 @@ const Home: NextPage = ({ data }: any) => {
 
 
     //Get Laundry Service
-    const laundryservice = Object.values(getData).filter((v: any) => {
+    const laundryservice = Object.values(post).filter((v: any) => {
       return v.slug === 'laundry-services'
     }).map((vl: any,k: any) =>(
       <div key={k} className="homepage-laundry">
@@ -125,7 +81,7 @@ const Home: NextPage = ({ data }: any) => {
 
   //Get Our Customes
 
-  const ourcustomers = Object.values(getData).filter((v: any) => {
+  const ourcustomers = Object.values(post).filter((v: any) => {
     return v.cat_title === 'Customers'
   }).map((vl: any,k: any) =>(
     <div key={k}>
@@ -192,27 +148,7 @@ const Home: NextPage = ({ data }: any) => {
 }
 
 
-export const getServerSideProps = async ()=>{
 
-  const query = encodeURIComponent(`*[_type == "post"]{
-    "title": title,
-    "slug": slug.current,
-    body,
-    mainImage,
-    "cat_title" : categories[]->title
-  }`)
-
-  const url = `https://x6mgs9be.api.sanity.io/v1/data/query/production?query=${query}`
-
-  const result = await fetch(url).then( data => data.json())
-
-  return {
-    props: {
-      data: result.result
-    }
-  }
-
-}
 
 
 export default Home

@@ -1,6 +1,7 @@
 
 import Bannertitle from '../components/Bannertitle';
 import Banner from '../components/Banner';
+export { getServerSideProps } from '../context/store'
 
 const Detergents = () => {
   return (
