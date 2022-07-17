@@ -49,7 +49,7 @@ const Nav = ()=>{
         return (
             <div className="navbar" ref={navElem}> 
 
-            <Hamburgeropen opennav = {opennav}  name="Smart Roofing Systems" />
+            <Hamburgeropen opennav = {opennav}  name="Belshaw Cleaning Services" />
     
             <nav data-nav="false" ref={nav} className="nav">
        

@@ -1,40 +1,36 @@
-import Sectiontitle from '../components/Sectiontitle';
 import Bannertitle from '../components/Bannertitle';
 import Banner from '../components/Banner';
-import { useSelector,useDispatch } from 'react-redux'
 import { useState,useEffect } from 'react'
-import { postactiontype } from '../redux/features/Post'
 import {PortableText} from '@portabletext/react'
 import imageUrlBuilder  from '@sanity/image-url';
-
+import Image from 'next/image'
+import { useSelector,useDispatch } from 'react-redux'
 
 const Whoweare = ({data}: any) => {
 
- 
   const [ getData,setData ] = useState({})
 
-  // const dispatch = useDispatch()
-  // dispatch(postactiontype(data))
-
-  // type State = {
-  //   post: {
-  //     data: {
-  //       result: {}
-  //     }
-  //   }
-  // }
-  // const result = useSelector((state: State) => state.post.data.result)
+  type State = {
+    post: {
+      data: {
+        result: {}
+      }
+    }
+  }
 
 
-  const builder = imageUrlBuilder({
-    projectId: 'x6mgs9be',
-    dataset: 'production'
-  })
+  const result = useSelector((state: State) => state.post.data.result)
 
+  console.log(result)
 
   useEffect(()=>{
 
-    const obj = Object.values(data.result).map( (v: any) => {
+    const builder = imageUrlBuilder({
+      projectId: 'x6mgs9be',
+      dataset: 'production'
+    })
+
+    const obj = Object.values(data).map( (v: any) => {
       return {
         ...v,
         mainImage: builder.image(v.mainImage),
@@ -63,7 +59,7 @@ const Whoweare = ({data}: any) => {
           </div>
         </div>
         <div>
-          <img src={vl.mainImage} alt="" />
+    <Image width="5" height="5" layout="responsive" src={vl.mainImage+''} alt="" />
         </div>
       </div>
   ))
@@ -102,7 +98,7 @@ export const getServerSideProps = async ()=>{
 
   return {
     props: {
-      data: result
+      data: result.result
     }
   }
 

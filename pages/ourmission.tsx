@@ -6,6 +6,7 @@ import { useState,useEffect } from 'react'
 import { postactiontype } from '../redux/features/Post'
 import {PortableText} from '@portabletext/react'
 import imageUrlBuilder  from '@sanity/image-url';
+import Image from 'next/image'
 
 
 const Ourmission = ({data}: any) => {
@@ -26,15 +27,17 @@ const Ourmission = ({data}: any) => {
   // const result = useSelector((state: State) => state.post.data.result)
 
 
-  const builder = imageUrlBuilder({
-    projectId: 'x6mgs9be',
-    dataset: 'production'
-  })
+
 
 
   useEffect(()=>{
 
-    const obj = Object.values(data.result).map( (v: any) => {
+    const builder = imageUrlBuilder({
+      projectId: 'x6mgs9be',
+      dataset: 'production'
+    })
+
+    const obj = Object.values(data).map( (v: any) => {
       return {
         ...v,
         mainImage: builder.image(v.mainImage),
@@ -63,7 +66,7 @@ const Ourmission = ({data}: any) => {
           </div>
         </div>
         <div>
-          <img src={vl.mainImage} alt="" />
+    <Image width="5" height="4" layout="responsive" src={vl.mainImage+''} alt="" />
         </div>
       </div>
   ))
@@ -102,7 +105,7 @@ export const getServerSideProps = async ()=>{
 
   return {
     props: {
-      data: result
+      data: result.result
     }
   }
 

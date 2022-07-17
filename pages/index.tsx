@@ -6,7 +6,8 @@ import { useDispatch,useSelector } from 'react-redux';
 import imageUrlBuilder  from '@sanity/image-url';
 import { useState,useEffect } from 'react'
 import {PortableText} from '@portabletext/react'
-import Link from 'next/link'
+import Link from 'next/link' 
+import Image from 'next/image'
 
 
 const Home: NextPage = ({ data }: any) => {
@@ -16,6 +17,8 @@ const Home: NextPage = ({ data }: any) => {
   const dispatch = useDispatch()
   dispatch(postactiontype(data))
 
+  console.log(data)
+
   type State = {
     post: {
       data: {
@@ -23,16 +26,16 @@ const Home: NextPage = ({ data }: any) => {
       }
     }
   }
-  const result = useSelector((state: State) => state.post.data.result)
 
+  const result = useSelector((state: State) => state.post.data)
 
-  const builder = imageUrlBuilder({
-    projectId: 'x6mgs9be',
-    dataset: 'production'
-  })
-
-
+  
   useEffect(()=>{
+
+    const builder = imageUrlBuilder({
+      projectId: 'x6mgs9be',
+      dataset: 'production'
+    })
 
     const obj = Object.values(result).map( (v: any) => {
       return {
@@ -49,7 +52,7 @@ const Home: NextPage = ({ data }: any) => {
       setData({})
     }
 
-  },[data])
+  },[result])
 
 
   //Get Residention Cleaning
@@ -70,7 +73,7 @@ const Home: NextPage = ({ data }: any) => {
   }).map((vl: any,k: any) =>(
     <div key={k}>
       <div className="imageBx">
-      <img src={vl.mainImage+''} alt="" />
+      <Image width="4" height="3" layout="responsive" src={vl.mainImage+''} alt="" />
       </div>
       <h3>{vl.title}</h3>
     </div>
@@ -96,7 +99,7 @@ const Home: NextPage = ({ data }: any) => {
   }).map((vl: any,k: any) =>(
     <div key={k}>
       <div className="imageBx">
-      <img src={vl.mainImage+''} alt="" />
+      <Image width="4" height="3" layout="responsive" src={vl.mainImage+''} alt="" />
       </div>
       <h3>{vl.title}</h3>
     </div>
@@ -115,7 +118,7 @@ const Home: NextPage = ({ data }: any) => {
           </div>
         </div>
         <div>
-          <img src={vl.mainImage} alt="" />
+        <Image width="4" height="3" layout="responsive" src={vl.mainImage+''} alt="" />
         </div>
       </div>
   ))
@@ -128,7 +131,7 @@ const Home: NextPage = ({ data }: any) => {
     <div key={k}>
       <div className="custbx">
       <div>
-        <img src={vl.mainImage} alt="" />
+      <Image width="4" height="3" layout="responsive" src={vl.mainImage+''} alt="" />
       </div>
       <h5>{vl.title}</h5>
     </div>
@@ -144,7 +147,6 @@ const Home: NextPage = ({ data }: any) => {
       </div>
 
       <Headertitle />
-
         <section className="sectiontwo residentialCleaning">
           <div className="container">
             {residentialInfo}
@@ -206,7 +208,7 @@ export const getServerSideProps = async ()=>{
 
   return {
     props: {
-      data: result
+      data: result.result
     }
   }
 
