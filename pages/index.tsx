@@ -6,6 +6,8 @@ import Image from 'next/image'
 import { datacontext } from '../context/store'
 export { getServerSideProps } from '../context/store'
 import Slider from '../components/Slider'
+import FreeQuote from '../components/FreeQuote'
+import FreeQuoteQuestions from '../components/FreeQuoteQuestions'
 
 const Home: NextPage = () => {
 
@@ -136,6 +138,17 @@ const Home: NextPage = () => {
         <h1>Our Clients</h1>
         <div className="container">
         {ourcustomers}
+        </div>
+        <br />
+      </section>
+
+
+      <section className="sectionone">
+        <div className="container">
+          <div>
+            <FreeQuote />
+            <FreeQuoteQuestions />
+          </div>
         </div>
         <br />
       </section>

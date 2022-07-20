@@ -146,7 +146,7 @@ const Nav = ()=>{
                         </Link>
                     </li>
                     <li className="getquote">
-                        <Link href="/#">
+                        <Link href="/contact">
                             <a onClick={closenav}>Get a free quote</a>
                         </Link>
                     </li>
