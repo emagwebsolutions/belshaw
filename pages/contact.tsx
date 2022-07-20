@@ -2,6 +2,7 @@ import Sectiontitle from '../components/Sectiontitle';
 import Bannertitle from '../components/Bannertitle';
 import Contactdetails from '../components/Contactdetails';
 import Banner from '../components/Banner';
+export { getServerSideProps } from '../context/store'
 
 const Contact = () => {
 

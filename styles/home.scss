@@ -85,11 +85,11 @@
         flex: 5rem 1 1;
     }
     p{
-        font-size: 1.2rem;
+        font-size: 1.4rem;
     }
     ul{
         list-style-type:circle;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         line-height: 1.7rem;
         margin-left: 1.2em;
     }
@@ -106,13 +106,14 @@
 
 .ourclients{
     .custbx{
+        height: 24rem;
         padding: 1em;
         background-color: white;
         border: solid .5rem muted(.1);
         h5{
             color: muted();
             text-align: center; 
-            font-size: 1.2rem;
+            font-size: 1.4rem;
         }
         div{
             height: 8rem;
@@ -138,31 +139,6 @@
     }
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 @media(max-width: 35em){

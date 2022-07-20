@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { datacontext } from '../context/store'
 export { getServerSideProps } from '../context/store'
-
+import Slider from '../components/Slider'
 
 const Home: NextPage = () => {
 
@@ -96,11 +96,8 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <div className="slideshow">
-        <div className="headerimage">
 
-        </div>
-      </div>
+      <Slider />
 
       <Headertitle />
         <section className="sectiontwo residentialCleaning">
