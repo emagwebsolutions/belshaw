@@ -18,7 +18,6 @@ const FreeQuote = () => {
             description: '',
         }
     })
-
  
     return (
         <div className="freequote">
@@ -34,7 +33,7 @@ const FreeQuote = () => {
                 <div>
                     <input type="email" {...register('email',{
                         required: 'Email field required!'
-                    })} name="email"  placeholder=" " />
+                    })} placeholder=" " />
                     <label htmlFor="">Emai*</label>
                     <span>{errors.email?.message}</span>
                 </div>
@@ -66,13 +65,11 @@ const FreeQuote = () => {
                 <div>
                     <textarea {...register("description")}placeholder="Please tell us more about your cleaning needs so we can give you a more accurate estimate"></textarea>
                 </div>
-                
-                <input type="submit" disabled={!isValid} value="SEND" />
-
+            <input type="submit" disabled={!isValid} value="SEND" />
             </form>
- 
         </div>
     )
+    
 }
 
 export default FreeQuote

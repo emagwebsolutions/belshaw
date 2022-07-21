@@ -77,6 +77,14 @@ const Nav = ()=>{
                         <ul>
 
                         <li>
+                            <Link href="/team">
+                                <a onClick={closenav}>
+                                Our Team
+                                </a>
+                            </Link>
+                        </li>
+
+                        <li>
                             <Link href="/whoweare">
                                 <a onClick={closenav}>
                                 Who we are

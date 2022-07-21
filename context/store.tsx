@@ -14,10 +14,11 @@ export const getServerSideProps = async ()=>{
   const url = `https://x6mgs9be.api.sanity.io/v1/data/query/production?query=${query}`
 
   const result = await fetch(url).then( data => data.json())
+  const resp = await result.result
 
   return {
     props: {
-      data: result.result
+      data: resp
     }
   }
 }
@@ -38,7 +39,6 @@ const contextController = ( data: [] ) => {
       }
     })
   ,[data])
-
 
   return {
     post: obj

@@ -9,8 +9,8 @@ import Slider from '../components/Slider'
 import FreeQuote from '../components/FreeQuote'
 import FreeQuoteQuestions from '../components/FreeQuoteQuestions'
 
-const Home: NextPage = () => {
 
+const Home: NextPage = () => {
   const { post } = datacontext()
 
   //Get Residention Cleaning
@@ -37,8 +37,6 @@ const Home: NextPage = () => {
     </div>
   ))
 
-
-
     //Get Commercial Cleaning
     const commercialInfo = Object.values(post).filter((v: any) => {
       return v.slug === 'commercial-cleaning-excerpt'
@@ -62,7 +60,6 @@ const Home: NextPage = () => {
       <h3>{vl.title}</h3>
     </div>
   ))
-
 
     //Get Laundry Service
     const laundryservice = Object.values(post).filter((v: any) => {
@@ -98,9 +95,7 @@ const Home: NextPage = () => {
 
   return (
     <>
-
       <Slider />
-
       <Headertitle />
         <section className="sectiontwo residentialCleaning">
           <div className="container">
@@ -113,8 +108,6 @@ const Home: NextPage = () => {
             <a>View All</a>
           </Link>
       </section>
-
-      
       <section className="sectiontwo residentialCleaning">
           <div className="container">
             {commercialInfo}
@@ -127,13 +120,9 @@ const Home: NextPage = () => {
           </Link>
           <br />
       </section>
-
-
       <section className="sectionone aboutus">
             {laundryservice}
       </section>
-
-
       <section className="sectiontwo ourclients">
         <h1>Our Clients</h1>
         <div className="container">
@@ -141,8 +130,6 @@ const Home: NextPage = () => {
         </div>
         <br />
       </section>
-
-
       <section className="sectionone">
         <div className="container">
           <div>
@@ -152,13 +139,8 @@ const Home: NextPage = () => {
         </div>
         <br />
       </section>
-
     </>
   )
 }
-
-
-
-
 
 export default Home
