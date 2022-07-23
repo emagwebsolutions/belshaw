@@ -24,7 +24,7 @@ const Slider = () => {
       {fadeImages.map((fadeImage, index) => (
         <div className="each-fade" key={index}>
           <div className="image-container">
-            <Image width="6" height="3" layout="responsive" alt="" src={fadeImage.url} />
+            <Image width="6" priority height="3" layout="responsive" alt="" src={fadeImage.url} />
           </div>
         </div>
       ))}

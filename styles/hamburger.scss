@@ -8,7 +8,7 @@
         left: 0;
         width: 100vw;
         height: 100vh;
-        z-index: 8;
+        z-index: 28;
         .navanim,
         .nav-wrapper{
              position: fixed;
@@ -43,8 +43,8 @@
                     position: relative;
 
        
-                    &:nth-of-type(4)::after,
-                    &:nth-of-type(5)::after
+                    &:nth-of-type(3)::after,
+                    &:nth-of-type(4)::after
                     {
                         content: '^';
                         position: absolute;
@@ -96,6 +96,7 @@
 
     .hamburgerclose{
         width: 80%;
+    
     }
     .hamburgeropen{
         width: 100%;
@@ -118,7 +119,6 @@
                 font-weight: 900;
                 color: #777;
             }
-   
 
             .btntimes{
                 width: 2rem;
@@ -132,18 +132,17 @@
                     flex-direction: column;
                     justify-content: center;     
                     gap: .3rem;
-    
                     span{
                         border-bottom: .2rem solid rgba(0,0,0, .7);
                     }
         
                 }
+
                 .tms{
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    font-size: 2rem;
- 
+                    font-size: 1.6rem;
                 }
             }
         }

@@ -39,7 +39,7 @@ const Contact = () => {
               <Contactdetails 
                 icons = "fa fa-envelope"
                 heading = "Email"
-                details = "belshawcleaningservice@gmail.com"
+                details = "info@belshawcleaningservices.com"
               />
 
               <Contactdetails 

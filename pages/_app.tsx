@@ -6,12 +6,13 @@ import { ConstextProvider } from '../context/store'
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (        
-    <ConstextProvider data={pageProps.data}>
+    <ConstextProvider data={pageProps}>
       <ErrorBoundary>
         <Layout>
           <Component {...pageProps} />
         </Layout>
       </ErrorBoundary>
     </ConstextProvider>
+    
   )
 }

@@ -1,75 +1,191 @@
-.freequote{
-    max-width: 60rem;
-    h1{
-        font-size: 2rem;
-        color: muted();
-        text-align: center;
-        margin-bottom: 1.6em;
-    }
-    div{
-        position: relative;
-        label{
-            position: absolute;
-            top: .6em;
-            left: 1rem;
-            pointer-events: none;
+@media(min-width: 35em){
+
+    .freequote{
+        max-width: 60rem;
+        h1{
+            font-size: 2rem;
+            color: muted();
+            text-align: center;
+            margin-bottom: 1.6em;
         }
-    }
-    input:not(:placeholder-shown)+ label,
-    input:focus + label{
+        div{
+            position: relative;
+            label{
+                position: absolute;
+                top: .6em;
+                left: 1rem;
+                pointer-events: none;
+            }
+        }
+        input:not(:placeholder-shown)+ label,
+        input:focus + label{
+            position: absolute;
+            top: -1.5em;
+            font-size: 1rem;
+            transition: .3s;
+        }
+       input,textarea{
+        width: 100%;
+        margin-bottom: 2em;
+        padding: .5em .7em;
+        font-size: 1.4rem;
+        color: muted();
+       }
+       label{
+        font-size: 1.4rem;
+       }
+       textarea{
+        height: 20rem;
+       }
+       button{
+        margin-bottom: 2em;
+        background-color: danger();
+        color: white;
+        font-size: 1.4rem;
+        padding: .8em 1em;
+        margin-inline: auto;
+        cursor: pointer;
+        display: block;
+        width: 12rem;
+       }
+       :disabled{
+        background-color: #f4a285;
+        cursor: none;
+       }
+       margin-inline: auto;
+       span{
+        color: danger();
+        font-size: 1.4rem;
         position: absolute;
-        top: -1.5em;
-        font-size: 1rem;
-        transition: .3s;
+        left: 0;
+        top: 4rem;
+       }
     }
-   input,textarea{
-    width: 100%;
-    margin-bottom: 2em;
-    padding: .5em .7em;
-    font-size: 1.4rem;
-    color: muted();
-   }
-   label{
-    font-size: 1.4rem;
-   }
-   textarea{
-    height: 20rem;
-   }
-   [type="submit"]{
-    background-color: danger();
-    color: white;
-    font-size: 1.4rem;
-    padding: .8em 1em;
-    margin-inline: auto;
-    cursor: pointer;
-    display: block;
-    width: 12rem;
-   }
-   :disabled{
-    background-color: #f4a285;
-    cursor: none;
-   }
-   margin-inline: auto;
-   span{
-    color: danger();
-    font-size: 1.4rem;
-    position: absolute;
-    left: 0;
-    top: 4rem;
-   }
+    
+    .freequotequestions{
+        max-width: 60rem;
+        margin-inline: auto;
+        h3{
+            font-size: 2rem;
+            color: muted();
+            text-align: center;
+            margin-bottom: 1.6em;
+        }
+        p{
+            font-size: 1.4rem;
+            text-align: center;
+        }
+    
+    }
+    
+    .messagesent{
+        padding: 2em;
+        background-color: white;
+        text-align: center;
+        .fa{
+            font-size: 7rem;
+            color: success();
+        }
+        margin-bottom: 2em;
+    }
+
 }
 
-.freequotequestions{
-    max-width: 60rem;
-    margin-inline: auto;
-    h3{
-        font-size: 2rem;
-        color: muted();
-        text-align: center;
-        margin-bottom: 1.6em;
-    }
-    p{
+
+@media(max-width: 35em){
+
+    .freequote{
+        max-width: 60rem;
+        padding: 1em;
+        h1{
+            font-size: 2rem;
+            color: muted();
+            text-align: center;
+            margin-bottom: 1.6em;
+        }
+        div{
+            position: relative;
+            label{
+                position: absolute;
+                top: .6em;
+                left: 1rem;
+                pointer-events: none;
+            }
+        }
+        input:not(:placeholder-shown)+ label,
+        input:focus + label{
+            position: absolute;
+            top: -1.5em;
+            font-size: 1rem;
+            transition: .3s;
+        }
+       input,textarea{
+        width: 100%;
+        margin-bottom: 2em;
+        padding: .5em .7em;
         font-size: 1.4rem;
-        text-align: center;
+        color: muted();
+       }
+       label{
+        font-size: 1.4rem;
+       }
+       textarea{
+        height: 20rem;
+       }
+       button{
+        margin-bottom: 2em;
+        background-color: danger();
+        color: white;
+        font-size: 1.4rem;
+        padding: .8em 1em;
+        margin-inline: auto;
+        cursor: pointer;
+        display: block;
+        width: 12rem;
+       }
+       :disabled{
+        background-color: #f4a285;
+        cursor: none;
+       }
+       margin-inline: auto;
+       span{
+        color: danger();
+        font-size: 1.4rem;
+        position: absolute;
+        left: 0;
+        top: 4rem;
+       }
     }
+    
+    .freequotequestions{
+        max-width: 60rem;
+        margin-inline: auto;
+        padding: 1em;
+        h3{
+            font-size: 2rem;
+            color: muted();
+            text-align: center;
+            margin-bottom: 1.6em;
+        }
+        p{
+            font-size: 1.4rem;
+            text-align: center;
+        }
+    
+    }
+    
+    .messagesent{
+        padding: 2em;
+        background-color: white;
+        text-align: center;
+        .fa{
+            font-size: 7rem;
+            color: success();
+        }
+        margin-bottom: 2em;
+    }
+
 }
+
+
+

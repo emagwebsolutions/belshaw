@@ -3,7 +3,7 @@
     
 .headeer-title{
     position: absolute;
-    top: 6%;
+    top: 4%;
     left: 50%;
     transform: translateX(-50%);
     color: white;
@@ -46,47 +46,7 @@
 @media(max-width: 35em){
     
     .headeer-title{
-        position: absolute;
-        width: 100%;
-        top: 3%;
-        left: 50%;
-        text-align: center;
-        transform: translateX(-50%);
-        color: white;
-        z-index: 5;
-        padding: 2em;
-        a{
-            display: block;
-            background-color: danger();
-            font-size: 1.2rem;
-            color: white();
-            padding: .4em!important;
-            height: 3rem;
-            width: 15rem;
-            border-radius: 4rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-inline: auto;
-            margin-top: 2em;
-        }
-        h1{
-            font-size: 3rem;
-            font-weight: 900!important;
-            line-height: 8rem;
-        }
-        p{
-            color: white;
-            font-size: 1.6rem;
-            margin: 0;
-            line-height: 3rem;
-        }
-        .divider{
-            border-bottom: solid danger() .5rem;
-            margin-inline: auto;
-            margin-top: 1em;
-            width: 6rem;
-        }
+       display: none;
     }
     
 }

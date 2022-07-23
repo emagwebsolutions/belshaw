@@ -17,7 +17,7 @@ const Footer = ()=>{
                 <h1>BELSHAW CLEANING SERVICES</h1>
 
                 <div>
-                    <i className="fa fa-envelope"></i> belshawcleaningservice@gmail.com
+                    <i className="fa fa-envelope"></i> info@belshawcleaningservices.com
                 </div>
 
                 <div>

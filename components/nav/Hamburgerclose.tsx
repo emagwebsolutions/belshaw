@@ -1,4 +1,4 @@
-import styles from '../styles/Hamburger.module.scss'
+
 
 type obj = {
     closenav: (e:React.MouseEvent<HTMLDivElement>)=> void

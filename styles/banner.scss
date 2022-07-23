@@ -1,13 +1,35 @@
-.banner{
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-    &::after{
-        content: '';
-        background-color: muted(.3);
-        position: absolute;
+
+
+@media(max-width: 35em){
+    .banner{
+        width: 100vw;
+        height: 40rem;
+        position: relative;
+        &::after{
+            content: '';
+            background-color: muted(.3);
+            position: absolute;
+            width: 100vw;
+            height: 40rem;
+            z-index: 3;
+        }
+    }
+}
+
+
+@media(min-width: 35em){
+    .banner{
         width: 100vw;
         height: 100vh;
-        z-index: 3;
+        position: relative;
+        &::after{
+            content: '';
+            background-color: muted(.3);
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            z-index: 3;
+        }
     }
+    
 }
