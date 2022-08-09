@@ -69,7 +69,7 @@ const Home: NextPage = () => {
       <div key={k}>
         <div className="imageBx">
           <Image
-            width="4"
+            width="4" 
             height="3"
             layout="responsive"
             src={vl.mainImage + ''}
@@ -130,8 +130,11 @@ const Home: NextPage = () => {
 
   return (
     <>
+    <section className="slideshow">
       <Slider />
       <Headertitle />
+    </section>
+
       <section className="sectiontwo residentialCleaning">
         <div className="container">{residentialInfo}</div>
         <div className="container">{residentialCleaning}</div>

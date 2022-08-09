@@ -1,23 +1,23 @@
+import { datacontext } from '../context/store';
+import { PortableText } from '@portabletext/react';
 
 const Headertitle = () => {
-    return (
-        <div className="headeer-title">
+  const { post } = datacontext();
 
-            <h1>
-            Spotless cleaning
-            </h1>
-            <h1>
-             on your doorstep
-            </h1>
-
-            <p>
-            With a team of highly experienced cleaning professionals, we specialize in detailed and comprehensive cleaning. 
-            </p>
-
-
-            
+  const sliderCaption = Object.values(post)
+    .filter((v: any) => {
+      return v.slug === 'spotless-cleaning-at-your-doorstep';
+    })
+    .map((vl: any, k: any) => (
+      <div key={k} className="headeer-title">
+        <h1>{vl.title}</h1>
+        <div>
+          <PortableText value={vl.body} />
         </div>
-    )
-}
+      </div>
+    ));
 
-export default Headertitle
+  return <>{sliderCaption}</>;
+};
+
+export default Headertitle;

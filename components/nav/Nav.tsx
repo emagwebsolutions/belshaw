@@ -61,7 +61,7 @@ const Nav = ()=>{
                     <li className="logo-img-bx">
                         <Link href="/">
                             <a onClick={closenav}>
-                                <Image width="7" height="2" layout="responsive" src="/logo.jpg" alt="" />
+                                <Image width="7" height="2" layout="responsive" src="/logo.png" alt="" />
                             </a>
                         </Link>
                     </li>
